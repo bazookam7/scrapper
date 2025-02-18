@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS card_rates;
+CREATE TABLE card_rates (
+    id SERIAL PRIMARY KEY,
+    currency VARCHAR(255) NOT NULL,
+    tt_buy DECIMAL(10, 2) NOT NULL,
+    tt_sell DECIMAL(10, 2) NOT NULL,
+    company_name VARCHAR(255) NOT NULL,
+    reference_date DATE NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
